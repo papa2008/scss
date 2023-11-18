@@ -1,0 +1,50 @@
+.hero {
+  @media screen and (max-width:1199px){
+    padding: 118px 0;
+}
+@media screen and (max-width:767px){
+  min-width: 320px;
+}
+
+    background-image: linear-gradient(to top, getcolor('overlay-text'), getcolor('overlay-text')), url("../images/img.hero.svg");
+    background-size: cover;
+    padding: 200px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__title {
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+      text-align: center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: getcolor('white-text');
+      margin-bottom: 30px;
+      @media screen and (max-width:768px) {
+        font-size: 26px;
+        line-height: 1.61;
+        letter-spacing: 1.56px;
+    }
+    }
+    &__btn {
+      @media screen and (max-width:768px) {
+        width:200px;
+    }
+      @extend %button;
+      display: block;
+      margin: 0 auto;
+      font-family: "Roboto", sans-serif;
+      width: 216px;
+      transition: transform 500ms ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    
+  }
+  
+  
+  
+  
+
+  

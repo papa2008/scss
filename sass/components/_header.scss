@@ -1,0 +1,163 @@
+.header .inner-container{
+  @include flex();
+}
+
+
+
+.header {
+    @include flex();
+    width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0;
+  @media screen and (max-width:1199px){
+      padding: 21px 0;
+  }
+  @media screen and (max-width:767px){
+      padding: 10px 0;
+  }
+    &__right {
+      @media screen and (max-width: 1199px) {
+        @include flex($align-items:flex-start,$flex-dir:column);
+        gap:10px;
+        max-width: 138px;
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+      @include flex();
+      width: 333px;
+    }
+  }
+
+ 
+
+  .navigation {
+    @include flex();
+    width: 520px;
+  }
+  
+  .logo-link-header {
+    @media screen and (min-width:768px){
+      font-size: 24px;
+      letter-spacing: 0.72px;
+  }
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: getcolor('title-text');
+    letter-spacing: 0.03em;
+    animation: change-color 2s linear infinite;
+    
+    &__web {
+      color: #2196f3;
+      animation: changecolor 2s linear infinite;
+    }
+  }
+
+  .studio {
+    animation: ChangeColor 2s linear infinite;
+  }
+
+  @keyframes ChangeColor {
+    0% {
+      color: #2196f3;
+    }
+
+    100% {
+      color: #212121;
+    }
+  }
+
+  @keyframes change-color {
+    0% {
+      color: #2196f3;
+    }
+
+    100% {
+      color: #212121;
+    }
+
+  }
+
+  @keyframes changecolor {
+    0% {
+      color: #212121;
+    }
+
+    100% {
+      color: #2196f3;
+    }
+  }
+
+
+
+  .nav-list {
+    @media screen and (max-width:767px){
+      display: none;
+  }
+    @include flex();
+    width: 281px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    &__link {
+      @media screen and (max-width: 768px) {
+        
+      } 
+      color: getcolor('title-text');
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+      top: 52.5px;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: getcolor('hover-text');
+      border-radius: 2px; 
+    }
+    &:hover::after {
+      width: 100%;
+      transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover,
+    &:focus {
+    color: getcolor('hover-text');
+  }
+    }
+
+  }
+
+  
+
+  .contacts-link {
+    @media screen and (max-width:1199px) {
+      font-size: 12px;
+      letter-spaicing: 0.24px;
+    }
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.28px;
+    color: getcolor('just-text');
+    &:hover,
+    &:focus {
+    color: getcolor('hover-text');
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__svg {
+    fill: getcolor('just-text');
+    margin-right: 10px;
+
+  }
+
+  &:hover &__svg {
+    fill: getcolor('hover-text');
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  }
+  
+  
+  

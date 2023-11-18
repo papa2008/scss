@@ -1,0 +1,116 @@
+
+.team {
+  @media screen  and (max-width:768px){
+    padding: 60px 0;
+}
+    background-color: #f5f4fa;
+    padding: 94px 0;
+    &__title {
+      @media screen  and (max-width:768px) { 
+        margin-bottom: 30px;
+      }
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: getcolor('title-text');
+      margin-bottom: 50px;
+    }
+  }
+
+  
+
+  .team-list {
+    @include flex();
+    @media screen and (max-width:1199px) {
+      @include flex($wrap:wrap);
+      gap: 30px;
+    @media screen and (max-width:767px) {
+      @include flex(center, $wrap:wrap);
+    }
+  }
+    &__item {
+      transition: transform 500ms ease;
+      background: getcolor('white-text');
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+      padding-bottom: 30px;
+      &:hover {
+        transform: scale(1.1)
+      }
+    }
+    
+    &__thumb {
+      @media screen and (max-width:1199px){
+        width: 354px;
+        height: 374px;
+    }
+    @media screen and (max-width:767px){
+        width: 450px;
+        height: 460px;
+    }
+    @media screen and (max-width:480px){
+        min-width: 290px;
+        max-width: 450px;
+    }
+      width: 270px;
+      height: 260px;
+      margin-bottom: 30px;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: getcolor('title-text');
+      margin-bottom: 10px;
+    }
+    &__paragr {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.18;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: getcolor('just-text');
+      margin-bottom: 16px;
+    }
+  }
+
+  
+
+  
+
+  .socials {
+    @include flex(center);
+    width: 206px;
+    margin: 0 auto;
+    &__item {
+      width: 44px;
+      height: 44px;
+      @include flex(center);
+      transition: transform 500ms ease;
+      &:hover {
+        background-color: getcolor('hover-text');
+        border-radius: 50%;
+        transform: scale(1.1);
+      }
+      &:hover .socials__svg {
+        fill: #ffffff;
+      }
+    }
+    &__svg {
+      fill: #afb1b8;
+      width: 20px;
+      height: 20px;
+    }
+    
+  }
